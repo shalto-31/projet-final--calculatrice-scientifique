@@ -1,15 +1,10 @@
 #include <iostream>
-#include "color.h"
+#include "display.h"
 #include "calculSimple.h"
 #include "calculAvancer.h"
 
 int main() {
-
-    std::cout << "bonjour que voulez vous calculer aujourd'hui ? " << std::endl;
-    std::cout << "calcul de base :  1" << std::endl;
-    std::cout << "calcul avancer :  2" << std::endl;
-    std::cout << "calcul complex :  3" << std::endl;
-    std::cout << "quitter :  4" << std::endl;
+    drawMainMenu();
 
     int choix;
     std::cin >> choix;

@@ -1,12 +1,8 @@
 #include <iostream>
+#include "display.h"
 
 int test(){
-    std::cout << "quel calcul voulez-vous effectuer ? " << std::endl;
-    std::cout << "Addition :  1" << std::endl;
-    std::cout << "Soustraction :  2" << std::endl;
-    std::cout << "Multiplication :  3" << std::endl;
-    std::cout << "Division :  4" << std::endl;
-    std::cout << "retour :  5" << std::endl;
+    drawBasicMenu();
 
     int choix;
     std::cin >> choix;
