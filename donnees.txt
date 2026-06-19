@@ -1,2 +1,1 @@
-le resultat de l'addition est : 6
-
+le resultat de la puissance est : 5.4744e+36

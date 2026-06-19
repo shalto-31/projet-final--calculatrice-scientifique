@@ -52,3 +52,17 @@ void drawBasicMenu() {
     std::cout << Color::MAGENTA << "╚═════════════════════════╝\n";
     std::cout << Color::MAGENTA << "Choose: "<< std::flush;
 }
+
+void drawAdvancedMenu() {
+    clearScreen();
+    std::cout << Color::MAGENTA << "╔════════════════════════════╗\n";
+    std::cout << Color::MAGENTA << "║  advanced CALC             ║\n";
+    std::cout << Color::MAGENTA << "╠════════════════════════════╣\n";
+    std::cout << Color::MAGENTA << "║  1. puissance              ║\n";
+    std::cout << Color::MAGENTA << "║  2. racine caree           ║\n";
+    std::cout << Color::MAGENTA << "║  3. modulo                 ║\n";
+    std::cout << Color::MAGENTA << "║  4. factorielle            ║\n";
+    std::cout << Color::MAGENTA << "║  5. retour                 ║\n";
+    std::cout << Color::MAGENTA << "╚════════════════════════════╝\n";
+    std::cout << Color::MAGENTA << "Choose: "<< std::flush;
+}

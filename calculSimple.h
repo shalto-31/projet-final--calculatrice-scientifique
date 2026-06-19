@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include "display.h"
 
 int basicCalculMenu(){
     std::ofstream fichier("donnees.txt");
@@ -8,6 +7,7 @@ int basicCalculMenu(){
         std::cout << "Erreur d'ouverture du fichier.\n";
         return 1;
     }
+    clearScreen();
     drawBasicMenu();
     
     int choix;
