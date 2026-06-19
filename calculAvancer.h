@@ -20,6 +20,8 @@ int power() {
         std::cin >> *b;
         fichier << "le resultat de la puissance est : " << pow(*a, *b) << std::endl;
         std::cout << Color::GREEN << "le resultat est : " << pow(*a, *b) << std::flush << std::endl;
+        free(a)
+        free(b)
         return 0;
 };
 
@@ -34,6 +36,7 @@ int sqroot() {
         } else {
             std::cout << Color::BOLD_RED << "erreur : racine carrée d'un nombre négatif" << std::flush << std::endl;
         }
+        free(c)
         return 0;
 };
 
@@ -51,6 +54,8 @@ int modulo() {
         } else {
             std::cout << Color::BOLD_RED << "erreur : division par zéro" << std::flush << std::endl;
         }
+        free(d)
+        free(e)
         return 0;
 };
 
@@ -69,6 +74,7 @@ int factorial() {
         } else {
             std::cout << "erreur : factorielle d'un nombre négatif" << std::flush << std::endl;
         }
+        free(f)
         return 0;
 };
 
