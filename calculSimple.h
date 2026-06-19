@@ -1,7 +1,7 @@
 #include <iostream>
 #include "display.h"
 
-int test(){
+int basicCalculMenu(){
     drawBasicMenu();
 
     int choix;
@@ -11,49 +11,49 @@ int test(){
     case 1:
         int a,b;
         std::cout << "vous avez choisi l'addition" << std::endl;
-        std::cout << "entrez la valeur de a : " << std::endl;
+        std::cout << Color:: CYAN << "entrez la valeur de a : " << std::endl;
         std::cin >> a;
-        std::cout << "entrez la valeur de b : " << std::endl;
+        std::cout << Color::CYAN << "entrez la valeur de b : " << std::endl;
         std::cin >> b;
-        std::cout << "le resultat est : " << a + b << std::endl;
+        std::cout << Color:: GREEN << "le resultat est : " << a + b << std::endl;
+        
         break;
     case 2:
         int c,d;
         std::cout << "vous avez choisi la soustraction" << std::endl;
-        std::cout << "entrez la valeur de c : " << std::endl;
+        std::cout << Color:: CYAN  << "entrez la valeur de c : " << std::endl;
         std::cin >> c;
-        std::cout << "entrez la valeur de d : " << std::endl;
+        std::cout << Color:: CYAN  << "entrez la valeur de d : " << std::endl;
         std::cin >> d;
-        std::cout << "le resultat est : " << c - d << std::endl;
+        std::cout << Color::GREEN << "le resultat est : " << c - d << std::endl;
         break;
     case 3:
         int e,f;
         std::cout << "vous avez choisi la multiplication" << std::endl;
-        std::cout << "entrez la valeur de e : " << std::endl;
+        std::cout << Color:: CYAN  << "entrez la valeur de e : " << std::endl;
         std::cin >> e;
-        std::cout << "entrez la valeur de f : " << std::endl;
+        std::cout << Color:: CYAN << "entrez la valeur de f : " << std::endl;
         std::cin >> f;
-        std::cout << "le resultat est : " << e * f << std::endl;
+        std::cout << Color::GREEN << "le resultat est : " << e * f << std::endl;
         break;
     case 4:
         int g,h;
         std::cout << "vous avez choisi la division" << std::endl;
-        std::cout << "entrez la valeur de g : " << std::endl;
+        std::cout << Color:: CYAN << "entrez la valeur de g : " << std::endl;
         std::cin >> g;
-        std::cout << "entrez la valeur de h : " << std::endl;
+        std::cout << Color:: CYAN  << "entrez la valeur de h : " << std::endl;
         std::cin >> h;
         if (h != 0) {
-            std::cout << "le resultat est : " << g / h << std::endl;
+            std::cout << Color::GREEN << "le resultat est : " << g / h << std::endl;
         } else {
-            std::cout << "erreur : division par zéro" << std::endl;
+            std::cout << Color::RED << "erreur : division par zéro" << std::endl;
         }
         break;
-
-    case 5:
-        std::cout << "vous avez choisi de revenir au menu principal" << std::endl;
+    case 6:
+        std::cout << Color::MAGENTA << "retour au menu principal" << std::endl;
         break;
     default:
-        std::cout << "choix invalide" << std::endl;
+        std::cout << Color::RED << "choix invalide" << std::endl;
     }
 
     return 0;

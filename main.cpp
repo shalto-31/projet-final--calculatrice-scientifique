@@ -1,9 +1,12 @@
 #include <iostream>
+#include <limits>
+#include <string>
 #include "display.h"
 #include "calculSimple.h"
 #include "calculAvancer.h"
 
 int main() {
+    clearScreen();
     drawMainMenu();
 
     int choix;
@@ -11,15 +14,15 @@ int main() {
 
     switch (choix) {
     case 1:
-        test();
+        basicCalculMenu();
         break;
     case 2:
         avancer();
         break;
     case 3:
+        std::cout << "quitter" << std::endl;
+        exit;
         break;
-    case 4:
-        return 0;
     default:
         std::cout << "choix invalide" << std::endl;
         break;
