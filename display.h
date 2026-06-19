@@ -34,10 +34,9 @@ void drawMainMenu() {
     std::cout << Color::MAGENTA << "╠═════════════════════╣\n";
     std::cout << Color::MAGENTA << "║  1. Basic           ║\n";
     std::cout << Color::MAGENTA << "║  2. Avance          ║\n";
-    std::cout << Color::MAGENTA << "║  3. Complex         ║\n";
     std::cout << Color::MAGENTA << "║  3. Quitter         ║\n";
     std::cout << Color::MAGENTA << "╚═════════════════════╝\n";
-    std::cout << Color::MAGENTA << "Choose: ";
+    std::cout << Color::MAGENTA << "Choose: "<< std::flush;
 }
 
 void drawBasicMenu() {
@@ -51,5 +50,5 @@ void drawBasicMenu() {
     std::cout << Color::MAGENTA << "║  4. Division            ║\n";
     std::cout << Color::MAGENTA << "║  5. retour              ║\n";
     std::cout << Color::MAGENTA << "╚═════════════════════════╝\n";
-    std::cout << Color::MAGENTA << "Choose: ";
+    std::cout << Color::MAGENTA << "Choose: "<< std::flush;
 }

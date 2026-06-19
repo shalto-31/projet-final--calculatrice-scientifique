@@ -1,0 +1,2 @@
+le resultat de l'addition est : 6
+

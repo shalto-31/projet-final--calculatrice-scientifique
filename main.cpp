@@ -1,9 +1,9 @@
 #include <iostream>
 #include <limits>
-#include <string>
 #include "display.h"
 #include "calculSimple.h"
 #include "calculAvancer.h"
+
 
 int main() {
     clearScreen();
@@ -21,10 +21,10 @@ int main() {
         break;
     case 3:
         std::cout << "quitter" << std::endl;
-        exit;
+        return 0;
         break;
     default:
-        std::cout << "choix invalide" << std::endl;
+        std::cout << Color::BOLD_RED << "choix invalide" << std::flush << std::endl;
         break;
     }
 

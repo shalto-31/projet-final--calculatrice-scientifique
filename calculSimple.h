@@ -1,9 +1,15 @@
 #include <iostream>
+#include <fstream>
 #include "display.h"
 
 int basicCalculMenu(){
+    std::ofstream fichier("donnees.txt");
+    if (!fichier) {
+        std::cout << "Erreur d'ouverture du fichier.\n";
+        return 1;
+    }
     drawBasicMenu();
-
+    
     int choix;
     std::cin >> choix;
 
@@ -15,7 +21,8 @@ int basicCalculMenu(){
         std::cin >> a;
         std::cout << Color::CYAN << "entrez la valeur de b : " << std::endl;
         std::cin >> b;
-        std::cout << Color:: GREEN << "le resultat est : " << a + b << std::endl;
+        fichier << "le resultat de l'addition est : " << a + b << std::endl;
+        std::cout << Color:: GREEN << "le resultat est : " << a + b << std::flush << std::endl;
         
         break;
     case 2:
@@ -25,7 +32,8 @@ int basicCalculMenu(){
         std::cin >> c;
         std::cout << Color:: CYAN  << "entrez la valeur de d : " << std::endl;
         std::cin >> d;
-        std::cout << Color::GREEN << "le resultat est : " << c - d << std::endl;
+        fichier << "le resultat de l'addition est : " << c - d << std::endl;
+        std::cout << Color::GREEN << "le resultat est : " << c - d << std::flush << std::endl;
         break;
     case 3:
         int e,f;
@@ -34,7 +42,8 @@ int basicCalculMenu(){
         std::cin >> e;
         std::cout << Color:: CYAN << "entrez la valeur de f : " << std::endl;
         std::cin >> f;
-        std::cout << Color::GREEN << "le resultat est : " << e * f << std::endl;
+        fichier << "le resultat de l'addition est : " << e * f << std::endl;
+        std::cout << Color::GREEN << "le resultat est : " << e * f << std::flush << std::endl;
         break;
     case 4:
         int g,h;
@@ -44,16 +53,17 @@ int basicCalculMenu(){
         std::cout << Color:: CYAN  << "entrez la valeur de h : " << std::endl;
         std::cin >> h;
         if (h != 0) {
-            std::cout << Color::GREEN << "le resultat est : " << g / h << std::endl;
+            fichier << "le resultat de l'addition est : " << g + h << std::endl;
+            std::cout << Color::GREEN << "le resultat est : " << g / h << std::flush << std::endl;
         } else {
-            std::cout << Color::RED << "erreur : division par zéro" << std::endl;
+            std::cout << Color::BOLD_RED << "erreur : division par zéro" << std::flush << std::endl;
         }
         break;
     case 6:
         std::cout << Color::MAGENTA << "retour au menu principal" << std::endl;
         break;
     default:
-        std::cout << Color::RED << "choix invalide" << std::endl;
+        std::cout << Color::RED << "choix invalide" << std::flush << std::endl;
     }
 
     return 0;
